@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="Hikaru.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="gb1.png" alt="Logo" class="logo">
+        <h1>Gamma&Beta website</h1>
+    </header>
+    <aside>
+        <div class="collapsible-menu">
+            <li><a href="#info1">About Affif</a></li>
+            <li><a href="#info2">About *****</a></li>
+            <li><a href="#info3">About *****</a></li>
+        </div>
+    </aside>
+    <nav>
+        <div class="collapsible-menu">
+            <button class="collapsible">contact Affif</button>
+            <div class="content">
+                <p>
+                    muhammadaffiffarhan@graduate.utm.my<br>
+                    0133002515<br>
+                    <a href="https://www.linkedin.com/in/muhammad-affif-farhan-67691b258/">linkdin</a>
+                </p>
+            </div>
+            <button class="collapsible">contact *****</button>
+            <div class="content">
+                <p>
+                    muhammadaffiffarhan@graduate.utm.my<br>
+                    0133002515<br>
+                    <a href="https://www.linkedin.com/in/muhammad-affif-farhan-67691b258/">linkdin</a>
+                </p>
+            </div>
+            <button class="collapsible">contact ****</button>
+            <div class="content">
+                <p>
+                    muhammadaffiffarhan@graduate.utm.my<br>
+                    0133002515<br>
+                    <a href="https://www.linkedin.com/in/muhammad-affif-farhan-67691b258/">linkdin</a>
+                </p>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="info">
+            <img id="info1" src="Affif.JPG" alt="Placeholder Image">
+            <h2>Personal Information</h2>
+            <ul>
+                <li><strong>Name:</strong> Muhammad Affif Farhan</li>
+                <li><strong>AKA:</strong> Hikaru</li>
+                <li><strong>Age:</strong> 21</li>
+                <li><strong>Education:</strong> University Technology of Malaysia, Network & Cyber Security</li>
+                <li><strong>Relationship Status:</strong> Single</li>
+                <li><strong>Interests:</strong> Coding, Technology, Music</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h2>About me</h2>
+            <ul>
+                I'm a passionate Student with a love for technology and a curiosity for learning new things.
+                I enjoy exploring the world of web development, networking, and programming. When I'm not studying or
+                coding, you can find me playing video games or reading. I'm excited to see where my interests
+                and skills take me in the future!
+            </ul>
+        </div>
+        <br><br>
+
+        <div class="info">
+            <img id="info2" src="https://via.placeholder.com/200" alt="Placeholder Image">
+            <h2>Personal Information</h2>
+            <ul>
+                <li><strong>Name:</strong> </li>
+                <li><strong>AKA:</strong> </li>
+                <li><strong>Age:</strong> 21</li>
+                <li><strong>Education:</strong> University Technology of Malaysia, Network & Cyber Security</li>
+                <li><strong>Relationship Status:</strong> Single</li>
+                <li><strong>Interests:</strong> </li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h2>About me</h2>
+            <ul>
+                Tulis sini
+            </ul>
+        </div>
+        <br><br>
+
+        <div class="info">
+            <img id="info3" src="https://via.placeholder.com/200" alt="Placeholder Image">
+            <h2>Personal Information</h2>
+            <ul>
+                <li><strong>Name:</strong> </li>
+                <li><strong>AKA:</strong> </li>
+                <li><strong>Age:</strong> 21</li>
+                <li><strong>Education:</strong> University Technology of Malaysia, Network & Cyber Security</li>
+                <li><strong>Relationship Status:</strong> Single</li>
+                <li><strong>Interests:</strong> </li>
+            </ul>
+        </div>
+
+        <div class=" info">
+            <h2>About me</h2>
+            <ul>
+                Tulis sini
+            </ul>
+        </div>
+    </main>
+</body>
+
+<footer>
+    <p>&copy; 2024 Hikaru</p>
+</footer>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.style.width = null;
+                content.style.padding = null;
+                this.style.width = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.width = content.scrollWidth + "px";
+                content.style.padding = "20px"; // Adjust the padding as needed
+                this.style.width = content.scrollWidth + "px";
+            }
+        });
+    }
+</script>

@@ -1,0 +1,181 @@
+
+        /* Reset default margin and padding */
+        body,
+        h1,
+        ul,
+        li,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Define grid layout */
+        body {
+            display: grid;
+            color: white;
+            grid-template-areas:
+                "header header header"
+                "leftmenu content rightmenu"
+                "footer footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr 2fr 1fr;
+            min-height: 100vh;
+            padding-top: 10%;
+        }
+
+        /* Header styling */
+        header {
+            grid-area: header;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 10px 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            height: 50px;
+            margin-right: 5px;
+        }
+
+        nav {
+            grid-area: leftmenu;
+            background-color: #121212;
+            padding: 80px 20px 20px;
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 15%;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        aside {
+            grid-area: rightmenu;
+            background-color: #121212;
+            padding: 80px 10px 20px;
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 15%;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Content styling */
+        main {
+            grid-area: content;
+            padding: 20px;
+        }
+
+        /* Footer styling */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        /* Additional styles from the provided CSS */
+        /* Add these styles below your existing styles */
+
+        /* Apply the font-family to the whole body */
+        body {
+            font-family: system-ui;
+        }
+
+        body {
+            background: linear-gradient(135deg, #eb315a 50%, #080808 50%);
+            margin: 0;
+            padding: 100px;
+            position: relative;
+
+        }
+
+
+        /* Style for links without underline */
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+
+        /* Collapsible menu styles */
+        .collapsible {
+            background-color: #eb315a;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            position: relative;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+        }
+
+        .collapsible:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #333333;
+        }
+
+        .info {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 5px solid #67192a;
+            border-radius: 10px;
+            text-align: left;
+
+        }
+
+        .info h2 {
+            font-family: 'Yu Gothic', Arial, sans-serif;
+            font-weight: bolder;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+
+        .info h2 ul li {
+            font-family: 'Times New Roman', Times, serif;
+            padding: 20px;
+            color: white;
+        }
